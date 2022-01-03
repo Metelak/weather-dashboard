@@ -9,9 +9,6 @@ header h1 {
     text-align: center;
     }
 
-/* #Left-Column{;
-} */
-
 #left-column input {
     width: 100%;  
 }
@@ -20,11 +17,11 @@ header h1 {
     background-color: rgb(66, 190, 248);
     border:rgb(66, 190, 248);
     color: white;
-    margin-top: 5px;
+    margin-top: 10px;
     width: 100%;
     }
 
-    .line {
+    .spacer {
         border-bottom: grey solid 1px;
         padding: 5px;
         margin-bottom: 5px;
@@ -35,7 +32,7 @@ header h1 {
         background: rgb(182, 181, 181);
         border: none;
         color: black;
-        margin-top: 5px;
+        margin-top: 10px;
         text-align: center;
         width:100%;
     }
