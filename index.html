@@ -22,86 +22,81 @@
 
     <main>
 
-        <div class="container">
-            <div class="row">
-
-                <div id="left-column" class="col-sm-3 col-md-5 col-lg-3">
-                    <div id="search">
-                        <h2>Search for a City:</h2>
-
-                        <input id="textfield" placeholder="Minneapolis"></input>
+        <div class="container row">
+            <div id="left-column" class="col-sm-3 col-md-5 col-lg-3">
+                <div class="card">
+                    <h3>Search for a City:</h3>
+                    <form id="search-form" class="card-body">
+                        <input id="text-field" placeholder="Minneapolis"></input>
                         <br>
                         <button type="button" id="searchBtn">Search</button>
-                    </div>
+                    </form>
+                </div>
+                <div class="spacer"></div>
 
-                    <div class="spacer"></div>
+                <div id="search-history">
+                    <button type="button" class="button" id="city1">city1</button>
+                    <button type="button" class="button" id="city2">city2</button>
+                    <button type="button" class="button" id="city3">city3</button>
+                    <button type="button" class="button" id="city4">city4</button>
+                    <button type="button" class="button" id="city5">city5</button>
+                    <button type="button" class="button" id="city6">city6</button>
+                    <button type="button" class="button" id="city7">city7</button>
+                    <button type="button" class="button" id="city8">city8</button>
+                </div>
+            </div>
 
-                    <div id="search-history">
-                        <button type="button" class="button" id="city1">city1</button>
-                        <button type="button" class="button" id="city2">city2</button>
-                        <button type="button" class="button" id="city3">city3</button>
-                        <button type="button" class="button" id="city4">city4</button>
-                        <button type="button" class="button" id="city5">city5</button>
-                        <button type="button" class="button" id="city6">city6</button>
-                        <button type="button" class="button" id="city7">city7</button>
-                        <button type="button" class="button" id="city8">city8</button>
-                    </div>
+            <div id="right-column" class="col-sm-9 col-md-7 col-lg-9">
+                <div id="current-city">
+                    <h2>Current City, Date </h2>
+                    <div>icon</div>
+                    <p>Temperature: </p>
+                    <p>Humidity:</p>
+                    <p>Wind Speed:</p>
+                    <p>UV Index:</p>
+                    <div>uv index favorable, moderate, or severe</div>
                 </div>
 
-                <div id="right-column" class="col-sm-9 col-md-7 col-lg-9">
-                    <div id="current-city">
-                        <h2>Current City, Date </h2>
-                        <div>icon</div>
-                        <p>Temperature: </p>
-                        <p>Humidity:</p>
-                        <p>Wind Speed:</p>
-                        <p>UV Index:</p>
-                        <div>uv index favorable, moderate, or severe</div>
-                    </div>
+                <div id="five-day">
+                    <h4>5-Day Forecast:</h4>
+                    <div class="row">
+                        <div class="col-sm-2 justify-space-around dayBox" id="day-one">
+                            <p>Date</p>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p>Humidity</p>
+                        </div>
 
-                    <div id="five-day">
+                        <div class="col-sm-2 justify-space-around dayBox" id="day-two">
+                            <p>Date</p>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p>Humidity</p>
+                        </div>
 
-                        <h4>5-Day Forecast:</h4>
+                        <div class="col-sm-2 justify-space-around dayBox" id="day-three">
+                            <p>Date</p>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p>Humidity</p>
+                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-2 justify-space-between dayBox" id="day-one">
-                                <p>Date</p>
-                                <p>Temp</p>
-                                <p>Wind</p>
-                                <p>Humidity</p>
-                            </div>
+                        <div class="col-sm-2 justify-space-around dayBox" id="day-four">
+                            <p>Date</p>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p>Humidity</p>
+                        </div>
 
-                            <div class="col-sm-2 justify-space-between dayBox" id="day-two">
-                                <p>Date</p>
-                                <p>Temp</p>
-                                <p>Wind</p>
-                                <p>Humidity</p>
-                            </div>
-
-                            <div class="col-sm-2 justify-space-between dayBox" id="day-three">
-                                <p>Date</p>
-                                <p>Temp</p>
-                                <p>Wind</p>
-                                <p>Humidity</p>
-                            </div>
-
-                            <div class="col-sm-2 justify-space-between dayBox" id="day-four">
-                                <p>Date</p>
-                                <p>Temp</p>
-                                <p>Wind</p>
-                                <p>Humidity</p>
-                            </div>
-
-                            <div class="col-sm-2 justify-space-between dayBox" id="day-five">
-                                <p>Date</p>
-                                <p>Temp</p>
-                                <p>Wind</p>
-                                <p>Humidity</p>
-                            </div>
-
+                        <div class="col-sm-2 justify-space-around dayBox" id="day-five">
+                            <p>Date</p>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p>Humidity</p>
                         </div>
                     </div>
                 </div>
+            </div>
     </main>
     <script src="./assets/js/script.js"></script>
 </body>
