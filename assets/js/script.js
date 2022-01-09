@@ -90,16 +90,24 @@ var displayCurrentWeather = function (data, city) {
                 var date = new Date(day.date * 1000);
                 // input data from API into div
                 return `<div id="right-column" class="col-sm-9 col-md-7 col-lg-9">
-                <div id="current-city-weather">
-                    <h2>${date.toDateString()} </h2>
-                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
-                    }@4x.png" class="card-img-top"
-                    alt="${day.weather[0].description}" />
-                    <h3>${day.weather[0].main}</h3>
-                    <p>Temp: ${day.temp.day} \u00B0F</p>
-                    <p>Humidity: ${day.wind_speed} m/s</p>
-                    <p>Wind Speed: ${day.humidity} %</p>
-                    <p>UV Index: ${day.uvi}</p>
+                <div class="header-container container header-border">
+                    <div id="current-city-weather" class="row">
+                        <div class="col">
+                            <div class="card border-0" style="width: 10vw">
+                                <h2 class="card-title">${dt.toDateString()}</h2>
+                                <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
+                                    }@4x.png"  class="card-img-top" 
+                                    alt="${day.weather[0].description}" />
+                                <div class="card-body">
+                                    <h3 class="card-title">${day.weather[0].main}</h3>
+                                    <p class="card-text">Temp: ${day.temp.day} \u00B0F</p>
+                                    <p class="card-text">Humidity: ${day.humidity} %</p>
+                                    <p class="card-text">Wind: ${day.wind_speed} m/s</p>
+                                    <p class="card-text">UV index: ${day.uvi}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>`
             }
         });
