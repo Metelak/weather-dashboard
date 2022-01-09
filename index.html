@@ -15,13 +15,10 @@
 
 <body>
     <header>
-        <h1>
-            Weather Dashboard
-        </h1>
+        <h1>Weather Dashboard</h1>
     </header>
 
     <main>
-
         <div class="container row">
             <div id="left-column" class="col-sm-3 col-md-5 col-lg-3">
                 <div class="card">
@@ -31,7 +28,7 @@
                         <button type="button" id="searchBtn">Search</button>
                     </form>
                 </div>
-                <div class="spacer"></div>
+                <div class="line"></div>
 
                 <form id="search-history">
                     <!-- <button type="button" class="button" id="city1">city1</button>
@@ -42,23 +39,47 @@
                     <button type="button" class="button" id="city6">city6</button>
                     <button type="button" class="button" id="city7">city7</button>
                     <button type="button" class="button" id="city8">city8</button> -->
-                    </form>
+                </form>
             </div>
 
             <div id="right-column" class="col-sm-9 col-md-7 col-lg-9">
-                <div id="current-city">
-                    <h2>Current City, Date </h2>
-                    <div>icon</div>
-                    <p>Temperature: </p>
-                    <p>Humidity:</p>
-                    <p>Wind Speed:</p>
-                    <p>UV Index:</p>
-                    <div>uv index favorable, moderate, or severe</div>
+                <div class="header-container container header-border">
+                    <div id="current-city-weather" class="row">
+                        <div class="col">
+                            <div class="card">
+                                <h2 class="card-title">Current City, Date </h2>
+                                <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="Weather description" />
+                                <div class="card-body">
+                                    <h3 class="card-title">Weather Type</h3>
+                                    <p class="card-text">Temp: </p>
+                                    <p class="card-text">Humidity:</p>
+                                    <p class="card-text">Wind Speed:</p>
+                                    <p class="card-text">UV Index:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
 
-                <div id="five-day">
-                    <h4>5-Day Forecast:</h4>
-                    <div class="row">
+                <h4>5-Day Forecast:</h4>
+                <div class="container">
+                    <div id="five-day" class="row">
+                        <div class="col">
+                            <div id="day-card" class="card">
+                                <h2 class="card-title">Date</h2>
+                                <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="Weather description" />
+                                <div class="card-body">
+                                    <h3 class="card-title">Weather Type</h3>
+                                    <p class="card-text">Temp:</p>
+                                    <p class="card-text">Wind:</p>
+                                    <p class="card-text">Humidity:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
                         <div class="col-sm-2 justify-space-around dayBox" id="day-one">
                             <p>Date</p>
                             <p>Temp</p>
@@ -93,9 +114,9 @@
                             <p>Wind</p>
                             <p>Humidity</p>
                         </div>
-                    </div>
-                </div>
+                    </div> -->
             </div>
+        </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
