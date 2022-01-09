@@ -93,7 +93,7 @@ var displayCurrentWeather = function (data, city) {
                 <div id="current-city-weather">
                     <h2>${date.toDateString()} </h2>
                     <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
-                    }@4x.png"
+                    }@4x.png" class="card-img-top"
                     alt="${day.weather[0].description}" />
                     <h3>${day.weather[0].main}</h3>
                     <p>Temp: ${day.temp.day} \u00B0F</p>
@@ -113,10 +113,10 @@ var connectFiveDay = function (data) {
                 var date = new Date(day.date * 1000);
                 // input data from API into div
                 return `<div class="col">
-                <div class="card">
+                <div class="card h-100" style="width: 10vw">
                     <h2 class="card-title">${dt.toDateString()}</h2>
                     <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
-                            }@4x.png"
+                            }@4x.png" class="card-img-top"
                         alt=""${day.weather[0].description}" />
                     <div class="card-body">
                         <h3 class="card-title">${day.weather[0].main}</h3>
