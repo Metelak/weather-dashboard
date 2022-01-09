@@ -7,6 +7,7 @@ header h1 {
     background-image: linear-gradient(to right, rgb(25, 162, 226), rgb(9, 9, 49));
     color: white;
     text-align: center;
+    padding: 15px;
     }
 
 #left-column input {
@@ -40,12 +41,9 @@ header h1 {
     #right-column {
         margin-top: 5px;
     }
+
     #current-city-weather {
         border:black 1px solid;
-    }
-
-    h4{
-        margin-top: 5px;
     }
 
    #day-card {

@@ -64,7 +64,7 @@ var connectDaily = function (data) {
         .then(function (response) {
             // achieved connection
             if (response.ok) {
-                console.log(reponse);
+                console.log(response);
                 response.json().then(function (data) {
                     console.log(data);
                     connectFiveDay(data);
@@ -72,7 +72,7 @@ var connectDaily = function (data) {
                     displayCurrentWeather(data);
                 });
             } else {
-                alert("Error: " + reponse.statusText);
+                alert("Error: " + response.statusText);
             }
         })
         .catch(function (error) {
@@ -113,8 +113,8 @@ var connectFiveDay = function (data) {
                 var date = new Date(day.date * 1000);
                 // input data from API into div
                 return `<div class="col">
-                <div class="card h-100" style="width: 10vw">
-                    <h2 class="card-title">${dt.toDateString()}</h2>
+                <div class="card five-day-card h-100" style="width: 10vw">
+                    <h2 class="card-title">${date.toDateString()}</h2>
                     <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
                             }@4x.png" class="card-img-top"
                         alt=""${day.weather[0].description}" />
