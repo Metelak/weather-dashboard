@@ -3,11 +3,13 @@
 Developing a weather app to draw data from OpenWeather API to provide current weather information when a city is searched. 
 
 ## **User Story**
+
 AS A traveler
 * I WANT to see the weather outlook for multiple cities 
 * SO THAT I can plan a trip accordingly
 
 ## **Acceptance Criteria:**
+
 GIVEN a weather dashboard with form inputs
 * WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
@@ -21,15 +23,18 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 THEN I am again presented with current and future conditions for that city
 
 ### **Road Blocks**
+
 Ran into issues initially connecting the OpenWeather API. Then had an issue with data input for the 5-day forecast pulling from the API. Completed console logs to understand the data being retrieved better. 
 
 ### **Link to weather dashboard:**
 
+* GitHub Repo: https://github.com/Metelak/weather-dashboard
+* Deployed URL: https://metelak.github.io/weather-dashboard/
 
 
 ### **View of deployed app:**
 
-
+![screenshot](https://user-images.githubusercontent.com/94068596/148714238-a431d2d7-dc8c-4bb0-9f07-ffb4667639a5.png)
 
 ## **Credits:**
 
