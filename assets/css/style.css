@@ -42,9 +42,7 @@ header h1 {
         margin-top: 5px;
     }
 
-    #current-city-weather {
-        border:black 1px solid;
-    }
+    
 
    #day-card {
        background:rgb(37, 60, 78);

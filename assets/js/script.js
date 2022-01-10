@@ -87,13 +87,13 @@ var displayCurrentWeather = function (data, city) {
     currentWeatherEl.innerHTML = data.daily
         .map((day, idx) => {
             if (idx <= 0) {
-                var date = new Date(day.date * 1000);
+                var dt = new Date(day.dt * 1000);
                 // input data from API into div
-                return `<div id="right-column" class="col-sm-9 col-md-7 col-lg-9">
+                return `<div class="col-sm-9 col-md-7 col-lg-9">
                 <div class="header-container container header-border">
                     <div id="current-city-weather" class="row">
                         <div class="col">
-                            <div class="card border-0">
+                            <div class="card border-dark">
                                 <h2 class="card-title">${dt.toDateString()}</h2>
                                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
                                     }@4x.png"  class="card-img-top" 
@@ -118,13 +118,15 @@ var connectFiveDay = function (data) {
     connectFiveDay.innerHTML = data.daily
         .map((day, idx) => {
             if (idx <= 4) {
-                var date = new Date(day.date * 1000);
+                var dt = new Date(day.dt * 1000);
                 // input data from API into div
-                return `<div class="col">
+                return `<div class="container">
+                <div id="five-day" class="row">
+                <div class="col">
                 <div class="card five-day-card" style="width: 10vw">
-                    <h2 class="card-title">${date.toDateString()}</h2>
+                    <h2 class="card-title">${dt.toDateString()}</h2>
                     <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
-                            }@4x.png" class="card-img-top"
+                        }@4x.png" class="card-img-top"
                         alt=""${day.weather[0].description}" />
                     <div class="card-body">
                         <h3 class="card-title">${day.weather[0].main}</h3>
@@ -132,11 +134,12 @@ var connectFiveDay = function (data) {
                         <p class="card-text">Wind: ${day.wind_speed} m/s</p>
                         <p class="card-text">Humidity: ${day.humidity}</p>
                     </div>
+                </div>
                 </div>`
             }
         })
         .join("");
-        console.log(fiveDayEl);
+    console.log(fiveDayEl);
 }
 
 // add city searched to search history list
@@ -144,10 +147,10 @@ var saveSearch = function (city) {
     var searchText = city;
 }
 
-var pastSearch = function() {
+var pastSearch = function () {
     // create loop that contains search history buttons
     searchHistoryEl.innerHTML = "";
-    for (var i=0; i < history.length; i++) {
+    for (var i = 0; i < history.length; i++) {
         var searchList = document.createElement("input");
         searchList.setAttribute("type", "text");
         searchList.setAttribute("readonly", true);
