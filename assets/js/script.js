@@ -122,10 +122,8 @@ var connectFiveDay = function (data) {
             if (idx <= 4) {
                 var dt = new Date(day.dt * 1000);
                 // input data from API into div
-                return `<div class="container">
-                <div id="five-day" class="row">
-                <div class="col">
-                <div class="card five-day-card bg-info text-white w-100" style="width: 10vw">
+                return `<div class="col">
+                <div class="card five-day-card bg-info text-white" style="width: 10vw">
                     <h2 class="card-title">${dt.toDateString()}</h2>
                     <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
                         }@4x.png" class="card-img-top"
@@ -149,6 +147,13 @@ var connectFiveDay = function (data) {
 // add city searched to search history list
 var saveSearch = function (city) {
     var searchText = city;
+       if (localStorage.getItem("search", searchText) === null) {
+        // history.push(searchText);
+      
+        localStorage.setItem("search", JSON.stringify(history));
+        console.log(searchText);
+        pastSearch();
+      }
 }
 
 var pastSearch = function () {
