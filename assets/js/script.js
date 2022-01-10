@@ -110,12 +110,14 @@ var displayCurrentWeather = function (data, city) {
                     </div>
                 </div>`
             }
+            console.log(data);
         });
+        
 }
 
 var connectFiveDay = function (data) {
     var fiveDayEl = document.querySelector("#five-day");
-    connectFiveDay.innerHTML = data.daily
+    fiveDayEl.innerHTML = data.daily
         .map((day, idx) => {
             if (idx <= 4) {
                 var dt = new Date(day.dt * 1000);
@@ -123,7 +125,7 @@ var connectFiveDay = function (data) {
                 return `<div class="container">
                 <div id="five-day" class="row">
                 <div class="col">
-                <div class="card five-day-card" style="width: 10vw">
+                <div class="card five-day-card bg-info text-white w-100" style="width: 10vw">
                     <h2 class="card-title">${dt.toDateString()}</h2>
                     <img src="http://openweathermap.org/img/wn/${day.weather[0].icon
                         }@4x.png" class="card-img-top"
@@ -137,9 +139,11 @@ var connectFiveDay = function (data) {
                 </div>
                 </div>`
             }
+            console.log(data);
         })
         .join("");
     console.log(fiveDayEl);
+    
 }
 
 // add city searched to search history list

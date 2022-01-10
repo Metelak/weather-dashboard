@@ -4,7 +4,7 @@ body {
 }
 
 header h1 {
-    background-image: linear-gradient(to right, rgb(25, 162, 226), rgb(9, 9, 49));
+    background-image: linear-gradient(to right, rgb(27, 212, 245), rgb(9, 9, 49));
     color: white;
     text-align: center;
     padding: 15px;
@@ -15,9 +15,6 @@ header h1 {
 }
 
 #searchBtn {
-    background-color: rgb(66, 190, 248);
-    border:rgb(66, 190, 248);
-    color: white;
     margin-top: 10px;
     width: 100%;
     }
@@ -40,13 +37,6 @@ header h1 {
 
     #right-column {
         margin-top: 5px;
-    }
-
-    
-
-   #day-card {
-       background:rgb(37, 60, 78);
-       color: white;
     }
 
     .card-img-top {

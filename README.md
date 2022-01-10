@@ -20,7 +20,10 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 * WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
-### **Link to portfolio:**
+### **Road Blocks**
+Ran into issues initially connecting the OpenWeather API. Then had an issue with data input for the 5-day forecast pulling from the API. Completed console logs to understand the data being retrieved better. 
+
+### **Link to weather dashboard:**
 
 
 
